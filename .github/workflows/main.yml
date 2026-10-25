@@ -26,10 +26,8 @@ jobs:
 
       - name: Set Password for runneradmin
         run: |
-          # runneradmin এর পাসওয়ার্ড 1234 সেট করা
-          $password = "1234"
-          $securePass = ConvertTo-SecureString $password -AsPlainText -Force
-          Set-LocalUser -Name "runneradmin" -Password $securePass
+          # net user কমান্ড ব্যবহার করে সহজে পাসওয়ার্ড 1234 সেট করা
+          net user runneradmin 1234
 
       - name: Install Tailscale
         run: |

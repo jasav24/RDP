@@ -1,4 +1,4 @@
-name: RDP
+name: RDP-Backup
 
 on:
   workflow_dispatch:
